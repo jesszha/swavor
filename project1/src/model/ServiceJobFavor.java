@@ -10,4 +10,29 @@ public class ServiceJobFavor implements ServiceJob {
         this.u1 = u1;
         this.u2 = u2;
     }
+
+    public User getUser1() {
+        return u1;
+    }
+
+    public User getUser2() {
+        return u2;
+    }
+
+    public ServiceRequest getServiceRequest() {
+        return sr;
+    }
+
+    public void setUser1(User u1) {
+        this.u1 = u1;
+    }
+
+    public void setUser2(User u2) {
+        this.u2 = u2;
+    }
+
+    public void setServiceRequest(ServiceRequest sr) {
+        this.sr = sr;
+    }
+
 }
