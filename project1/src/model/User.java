@@ -11,12 +11,15 @@ public class User {
     private String username;
     private String about;
     private Set<ServiceCategory> skillCategories;
+    private double avgRating; //out of 10
+    private int numberOfRatings;
     //private Set<User> friends;
     //private Set<User> favor;
 
     public User(String name, String username) {
         this.name = name;
         this.username = username;
+        this.avgRating = 0.00;
     }
 
     public String getName() {
@@ -43,6 +46,11 @@ public class User {
         this.username = username;
     }
 
+    // Note this needs to be called to set ranking from database
+    public void setAvgRating(double avgRating) {
+        this.avgRating = avgRating;
+    }
+
     public void addSkillCategory(ServiceCategory skill) {
         skillCategories.add(skill);
     }
@@ -54,4 +62,10 @@ public class User {
     //public void addFavor(User owe) throws TooManyFavorsException {
     //    if (this.favor.size() >= MAX_FAVORS) throw new TooManyFavorsException("You owe too many favors.");favor.add(owe);
     //}*/
+
+    //TODO: update ranking
+    public void updateAvgRating(double rating) {
+
+    }
+
 }

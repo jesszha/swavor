@@ -1,5 +1,7 @@
 package database;
 
+import model.*;
+
 import java.sql.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,6 +21,49 @@ public class DatabaseHandler {
             e.printStackTrace();
         }
     }
+
+    // TODO: finish all insert and deletions
+
+    public void insertUser(User u) {
+        try {
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO user VALUES (?,?,?)");
+            ps.setString(1, u.getName());
+            ps.setString(2, u.getUsername());
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void insertServiceCategory(ServiceCategory sc) {
+
+    }
+
+    public void insertServiceRequest(ServiceRequest sr) {
+
+    }
+
+    public void insertServiceJobExchange(ServiceJobExchange sre) {
+
+    }
+
+    public void insertLocation(Location l) {
+
+    }
+
+    // TODO: query, returns all service requests in database with "type" or category of sc
+    //  requires some sort of conversion from Enumeration to interpretable string from mySQL
+    public void queryServiceRequestByCategory(ServiceCategory sc) {
+
+    }
+
+    // TODO: returns user with username...
+    public void queryUserByUsername(String username) {
+
+    }
+
+
 
     public boolean login(String username, String password) {
         try {
