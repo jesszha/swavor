@@ -12,6 +12,7 @@ public class Main implements TerminalTransactionsDelegate {
     }
 
     private void start() {
+        // Logs into the authenticate the cloud database so it can be used
         dbHandler.login("root", "nwhacks");
     }
 
