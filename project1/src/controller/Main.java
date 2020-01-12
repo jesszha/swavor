@@ -1,13 +1,18 @@
 package controller;
 
+import database.DatabaseHandler;
 import delegates.TerminalTransactionsDelegate;
 
 public class Main implements TerminalTransactionsDelegate {
 
-    public Main() {}
+    private DatabaseHandler dbHandler = null;
+
+    public Main() {
+        dbHandler = new DatabaseHandler();
+    }
 
     private void start() {
-
+        dbHandler.login("root", "nwhacks");
     }
 
     /**

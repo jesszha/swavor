@@ -37,11 +37,11 @@ public class ServiceJobExchange implements ServiceJob {
         this.u2 = u2;
     }
 
-    public void seServiceRequest1(ServiceRequest sr1) {
+    public void setServiceRequest1(ServiceRequest sr1) {
         this.sr1 = sr1;
     }
 
-    public void seServiceRequest2(ServiceRequest sr2) {
+    public void setServiceRequest2(ServiceRequest sr2) {
         this.sr2 = sr2;
     }
 

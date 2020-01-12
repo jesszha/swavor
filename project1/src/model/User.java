@@ -11,8 +11,8 @@ public class User {
     private String username;
     private String about;
     private Set<ServiceCategory> skillCategories;
-    private Set<User> friends;
-    private Set<User> favor;
+    //private Set<User> friends;
+    //private Set<User> favor;
 
     public User(String name, String username) {
         this.name = name;
@@ -47,12 +47,11 @@ public class User {
         skillCategories.add(skill);
     }
 
-    public void addFriend(User friend) {
+    /*public void addFriend(User friend) {
         this.friends.add(friend);
     }
 
-    public void addFavor(User owe) throws TooManyFavorsException {
-        if (this.favor.size() >= MAX_FAVORS) throw new TooManyFavorsException("You owe too many favors.");
-        favor.add(owe);
-    }
+    //public void addFavor(User owe) throws TooManyFavorsException {
+    //    if (this.favor.size() >= MAX_FAVORS) throw new TooManyFavorsException("You owe too many favors.");favor.add(owe);
+    //}*/
 }
